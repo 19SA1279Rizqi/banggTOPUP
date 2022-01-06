@@ -39,7 +39,7 @@ namespace TopUp
             this.label5 = new System.Windows.Forms.Label();
             this.loginbtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonconfir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -162,18 +162,18 @@ namespace TopUp
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // buttonconfir
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(246, 347);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 38);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "CONFIRM";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonconfir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonconfir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonconfir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonconfir.Location = new System.Drawing.Point(246, 347);
+            this.buttonconfir.Name = "buttonconfir";
+            this.buttonconfir.Size = new System.Drawing.Size(87, 38);
+            this.buttonconfir.TabIndex = 8;
+            this.buttonconfir.Text = "CONFIRM";
+            this.buttonconfir.UseVisualStyleBackColor = false;
+            this.buttonconfir.Click += new System.EventHandler(this.button3_Click);
             // 
             // pictureBox1
             // 
@@ -201,7 +201,7 @@ namespace TopUp
             this.ClientSize = new System.Drawing.Size(601, 437);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.buttonconfir);
             this.Controls.Add(this.loginbtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -233,7 +233,7 @@ namespace TopUp
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button loginbtn;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonconfir;
         public System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBoxEmail;

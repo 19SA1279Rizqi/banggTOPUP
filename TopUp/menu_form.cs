@@ -40,6 +40,7 @@ namespace TopUp
 
         }
 
+        //tombol konfir
         private void button3_Click(object sender, EventArgs e)
         {
             Regex mRegxExpression;
@@ -75,6 +76,7 @@ namespace TopUp
 
         }
 
+        //tombol transaction
         private void button2_Click(object sender, EventArgs e)
         {
             if (textBox1.Text.Length == 0 || textBox2.Text.Length == 0 || textBoxEmail.Text.Length == 0)
@@ -91,6 +93,7 @@ namespace TopUp
             }
         }
 
+        //tombol reset
         private void loginbtn_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != string.Empty || textBox2.Text != string.Empty || textBoxEmail.Text != string.Empty)
@@ -102,6 +105,7 @@ namespace TopUp
 
         }
 
+        //TextBox idgame
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(textBox1.Text, "[^0-9]"))

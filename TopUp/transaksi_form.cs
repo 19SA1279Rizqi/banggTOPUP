@@ -45,6 +45,7 @@ namespace TopUp
             IdGameTB.Text = f1.textBox1.Text;
         }
 
+        //TextBox namagame
         private void NamaGameTB_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (NamaGameTB.SelectedItem.ToString() == "ARENA OF VALOR")
@@ -84,6 +85,8 @@ namespace TopUp
                 comboBox1.Items.Add("1000 UC");
             }
         }
+
+        //tombol back
         private void BACK_Click(object sender, EventArgs e)
         {
             menu_form objmenu_form = new menu_form();
@@ -91,6 +94,8 @@ namespace TopUp
             objmenu_form.Show();
 
         }
+
+        //tombol close
         private void loginbtn_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -114,6 +119,7 @@ namespace TopUp
 
         }
 
+        //ComboBox nominal
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //AOV
@@ -196,6 +202,8 @@ namespace TopUp
 
         }
 
+
+        //tombol confirm
         private void button3_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
@@ -242,6 +250,7 @@ namespace TopUp
 
         }
 
+        
         private void button2_Click(object sender, EventArgs e)
         {
             
@@ -249,7 +258,8 @@ namespace TopUp
 
 
         SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Lenovo\Desktop\TopUpApp\DB\LoginDB.mdf;Integrated Security=True;Connect Timeout=30");
-
+        
+        //menampilkan data di gridview
         private void GetValue()
         {
 
@@ -270,6 +280,7 @@ namespace TopUp
 
         }
 
+        //tombol back
         private void button4_Click(object sender, EventArgs e)
         {
             menu_form objmenu_form = new menu_form();
@@ -282,6 +293,7 @@ namespace TopUp
 
         }
 
+        //tombol show
         private void buttonshow_Click(object sender, EventArgs e)
         {
             try

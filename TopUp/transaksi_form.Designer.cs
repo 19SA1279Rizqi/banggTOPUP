@@ -421,9 +421,9 @@ namespace TopUp
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(390, 300);
+            this.groupBox2.Location = new System.Drawing.Point(399, 300);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(389, 103);
+            this.groupBox2.Size = new System.Drawing.Size(410, 103);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             // 
@@ -431,9 +431,9 @@ namespace TopUp
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 19);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(374, 66);
+            this.dataGridView1.Size = new System.Drawing.Size(398, 66);
             this.dataGridView1.TabIndex = 0;
             // 
             // buttonshow
