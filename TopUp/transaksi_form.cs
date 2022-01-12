@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -251,7 +251,7 @@ namespace TopUp
         }
 
 
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Lenovo\Desktop\TopUpApp\DB\LoginDB.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-KQ9Q6C8H;Initial Catalog=Topup;Integrated Security=True");
         
         //menampilkan data di gridview
         private void GetValue()
