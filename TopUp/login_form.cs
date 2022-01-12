@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,7 +25,7 @@ namespace TopUp
         //tombol login
         private void loginbtn_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Lenovo\Desktop\TopUpApp\DB\LoginDB.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-KQ9Q6C8H;Initial Catalog=Topup;Integrated Security=True");
             string query = "select * from LoginTable where username = '" + TXTUsername.Text.Trim() + "' and password = '" + TXTPassword.Text.Trim() + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
             DataTable dt = new DataTable();
