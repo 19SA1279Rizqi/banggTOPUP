@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -58,7 +58,7 @@ namespace TopUp
 
             else
             {
-                SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Lenovo\Desktop\TopUpApp\DB\LoginDB.mdf;Integrated Security=True;Connect Timeout=30");
+                SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-KQ9Q6C8H;Initial Catalog=Topup;Integrated Security=True");
                 sqlcon.Open();
 
                 SqlCommand cmd = new SqlCommand("INSERT INTO PlayerTab(Game,GameID,Nickname,Email) VALUES('" + comboBox1.SelectedItem + "', @GameID,@Nickname,@Email)", sqlcon);
