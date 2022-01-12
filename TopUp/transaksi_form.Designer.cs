@@ -1,4 +1,3 @@
-﻿
 namespace TopUp
 {
     partial class transaksi_form
