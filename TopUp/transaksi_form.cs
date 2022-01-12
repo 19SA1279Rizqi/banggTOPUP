@@ -292,7 +292,7 @@ namespace TopUp
         {
             try
             {
-                SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Lenovo\Desktop\TopUpApp\DB\LoginDB.mdf;Integrated Security=True;Connect Timeout=30");
+                SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-KQ9Q6C8H;Initial Catalog=Topup;Integrated Security=True");
                 sqlcon.Open();
 
                 SqlCommand cmd = new SqlCommand("INSERT INTO TransaksiTab(Game,GameID,Nominal,TotalHarga,KodePembayaran) VALUES('" + NamaGameTB.SelectedItem + "', @GameID,@Nominal,@TotalHarga,@KodePembayaran)", sqlcon);
@@ -317,7 +317,9 @@ namespace TopUp
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            crystalreport report = new crystalreport();
+            report.Show();
+            Dispose();
         }
 
         private void back_Click(object sender, EventArgs e)
