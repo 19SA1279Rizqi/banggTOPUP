@@ -37,9 +37,9 @@ namespace TopUp
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.loginbtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.buttonconfir = new System.Windows.Forms.Button();
+            this.buttonreset = new System.Windows.Forms.Button();
+            this.buttontrnsaksi = new System.Windows.Forms.Button();
+            this.buttonconfirm = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -136,44 +136,44 @@ namespace TopUp
             this.label5.TabIndex = 6;
             this.label5.Text = "Emaill";
             // 
-            // loginbtn
+            // buttonreset
             // 
-            this.loginbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.loginbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginbtn.Location = new System.Drawing.Point(119, 347);
-            this.loginbtn.Name = "loginbtn";
-            this.loginbtn.Size = new System.Drawing.Size(83, 38);
-            this.loginbtn.TabIndex = 8;
-            this.loginbtn.Text = "RESET";
-            this.loginbtn.UseVisualStyleBackColor = false;
-            this.loginbtn.Click += new System.EventHandler(this.loginbtn_Click);
+            this.buttonreset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonreset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonreset.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonreset.Location = new System.Drawing.Point(119, 347);
+            this.buttonreset.Name = "buttonreset";
+            this.buttonreset.Size = new System.Drawing.Size(83, 38);
+            this.buttonreset.TabIndex = 8;
+            this.buttonreset.Text = "RESET";
+            this.buttonreset.UseVisualStyleBackColor = false;
+            this.buttonreset.Click += new System.EventHandler(this.buttonreset_Click);
             // 
-            // button2
+            // buttontrnsaksi
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(373, 347);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 38);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "TRANSACTION";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttontrnsaksi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttontrnsaksi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttontrnsaksi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttontrnsaksi.Location = new System.Drawing.Point(373, 347);
+            this.buttontrnsaksi.Name = "buttontrnsaksi";
+            this.buttontrnsaksi.Size = new System.Drawing.Size(106, 38);
+            this.buttontrnsaksi.TabIndex = 8;
+            this.buttontrnsaksi.Text = "TRANSACTION";
+            this.buttontrnsaksi.UseVisualStyleBackColor = false;
+            this.buttontrnsaksi.Click += new System.EventHandler(this.buttontransaksi_Click);
             // 
-            // buttonconfir
+            // buttonconfirm
             // 
-            this.buttonconfir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.buttonconfir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonconfir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonconfir.Location = new System.Drawing.Point(246, 347);
-            this.buttonconfir.Name = "buttonconfir";
-            this.buttonconfir.Size = new System.Drawing.Size(87, 38);
-            this.buttonconfir.TabIndex = 8;
-            this.buttonconfir.Text = "CONFIRM";
-            this.buttonconfir.UseVisualStyleBackColor = false;
-            this.buttonconfir.Click += new System.EventHandler(this.button3_Click);
+            this.buttonconfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonconfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonconfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonconfirm.Location = new System.Drawing.Point(246, 347);
+            this.buttonconfirm.Name = "buttonconfirm";
+            this.buttonconfirm.Size = new System.Drawing.Size(87, 38);
+            this.buttonconfirm.TabIndex = 8;
+            this.buttonconfirm.Text = "CONFIRM";
+            this.buttonconfirm.UseVisualStyleBackColor = false;
+            this.buttonconfirm.Click += new System.EventHandler(this.buttonconfirm_Click);
             // 
             // pictureBox1
             // 
@@ -200,9 +200,9 @@ namespace TopUp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(601, 437);
             this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.buttonconfir);
-            this.Controls.Add(this.loginbtn);
+            this.Controls.Add(this.buttontrnsaksi);
+            this.Controls.Add(this.buttonconfirm);
+            this.Controls.Add(this.buttonreset);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -231,9 +231,9 @@ namespace TopUp
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button loginbtn;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button buttonconfir;
+        private System.Windows.Forms.Button buttonreset;
+        private System.Windows.Forms.Button buttontrnsaksi;
+        private System.Windows.Forms.Button buttonconfirm;
         public System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBoxEmail;

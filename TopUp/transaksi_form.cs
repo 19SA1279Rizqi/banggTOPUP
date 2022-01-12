@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 
 namespace TopUp
@@ -95,8 +89,8 @@ namespace TopUp
 
         }
 
-        //tombol close
-        private void loginbtn_Click(object sender, EventArgs e)
+        //tombol cancel
+        private void cancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -204,7 +198,7 @@ namespace TopUp
 
 
         //tombol confirm
-        private void button3_Click(object sender, EventArgs e)
+        private void confirm_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
             {
@@ -266,7 +260,7 @@ namespace TopUp
             DataTable dt = new DataTable();
 
             sqlcon.Open();
-            string qry = "select * from TableTrans";
+            string qry = "select * from TransaksiTab";
             SqlCommand cmd = new SqlCommand(qry, sqlcon);
             SqlDataReader rdr = cmd.ExecuteReader();
             dt.Load(rdr);
@@ -301,8 +295,8 @@ namespace TopUp
                 SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Lenovo\Desktop\TopUpApp\DB\LoginDB.mdf;Integrated Security=True;Connect Timeout=30");
                 sqlcon.Open();
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO TableTrans(NamaGame,IdGame,Nominal,TotalHarga,KodePembayaran) VALUES('" + NamaGameTB.SelectedItem + "', @IdGame,@Nominal,@TotalHarga,@KodePembayaran)", sqlcon);
-                cmd.Parameters.AddWithValue("@IdGame", IdGameTB.Text);
+                SqlCommand cmd = new SqlCommand("INSERT INTO TransaksiTab(Game,GameID,Nominal,TotalHarga,KodePembayaran) VALUES('" + NamaGameTB.SelectedItem + "', @GameID,@Nominal,@TotalHarga,@KodePembayaran)", sqlcon);
+                cmd.Parameters.AddWithValue("@GameID", IdGameTB.Text);
                 cmd.Parameters.AddWithValue("@Nominal", comboBox1.Text);
                 cmd.Parameters.AddWithValue("@TotalHarga", textBox6.Text);
                 cmd.Parameters.AddWithValue("@KodePembayaran", textBox7.Text);
@@ -324,6 +318,13 @@ namespace TopUp
         private void button1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            menu_form objmenu_form = new menu_form();
+            this.Hide();
+            objmenu_form.Show();
         }
     }
 }

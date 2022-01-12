@@ -41,7 +41,7 @@ namespace TopUp
         }
 
         //tombol konfir
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonconfirm_Click(object sender, EventArgs e)
         {
             Regex mRegxExpression;
 
@@ -61,8 +61,8 @@ namespace TopUp
                 SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Lenovo\Desktop\TopUpApp\DB\LoginDB.mdf;Integrated Security=True;Connect Timeout=30");
                 sqlcon.Open();
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO PlayerTable(NamaGame,IdGame,Nickname,Email) VALUES('" + comboBox1.SelectedItem + "', @IdGame,@Nickname,@Email)", sqlcon);
-                cmd.Parameters.AddWithValue("@IdGame", textBox1.Text);
+                SqlCommand cmd = new SqlCommand("INSERT INTO PlayerTab(Game,GameID,Nickname,Email) VALUES('" + comboBox1.SelectedItem + "', @GameID,@Nickname,@Email)", sqlcon);
+                cmd.Parameters.AddWithValue("@GameID", textBox1.Text);
                 cmd.Parameters.AddWithValue("@Nickname", textBox2.Text);
                 cmd.Parameters.AddWithValue("@Email", textBoxEmail.Text);
                 cmd.ExecuteNonQuery();
@@ -77,7 +77,7 @@ namespace TopUp
         }
 
         //tombol transaction
-        private void button2_Click(object sender, EventArgs e)
+        private void buttontransaksi_Click(object sender, EventArgs e)
         {
             if (textBox1.Text.Length == 0 || textBox2.Text.Length == 0 || textBoxEmail.Text.Length == 0)
             {
@@ -94,7 +94,7 @@ namespace TopUp
         }
 
         //tombol reset
-        private void loginbtn_Click(object sender, EventArgs e)
+        private void buttonreset_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != string.Empty || textBox2.Text != string.Empty || textBoxEmail.Text != string.Empty)
                 comboBox1.SelectedIndex = -1;

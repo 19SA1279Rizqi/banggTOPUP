@@ -23,7 +23,7 @@ namespace TopUp
         }
 
         //tombol login
-        private void button1_Click(object sender, EventArgs e)
+        private void loginbtn_Click(object sender, EventArgs e)
         {
             SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Lenovo\Desktop\TopUpApp\DB\LoginDB.mdf;Integrated Security=True;Connect Timeout=30");
             string query = "select * from LoginTable where username = '" + TXTUsername.Text.Trim() + "' and password = '" + TXTPassword.Text.Trim() + "'";

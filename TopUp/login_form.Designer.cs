@@ -108,7 +108,7 @@ namespace TopUp
             this.loginbtn.TabIndex = 3;
             this.loginbtn.Text = "Login";
             this.loginbtn.UseVisualStyleBackColor = false;
-            this.loginbtn.Click += new System.EventHandler(this.button1_Click);
+            this.loginbtn.Click += new System.EventHandler(this.loginbtn_Click);
             // 
             // pictureBox1
             // 

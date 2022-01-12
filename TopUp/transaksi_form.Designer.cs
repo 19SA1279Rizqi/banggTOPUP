@@ -32,14 +32,14 @@ namespace TopUp
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.back = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.NamaGameTB = new System.Windows.Forms.ComboBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.button3 = new System.Windows.Forms.Button();
+            this.confirm = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.loginbtn = new System.Windows.Forms.Button();
+            this.cancel = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -86,14 +86,14 @@ namespace TopUp
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Black;
-            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.back);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.NamaGameTB);
             this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.confirm);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.loginbtn);
+            this.groupBox1.Controls.Add(this.cancel);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -109,18 +109,19 @@ namespace TopUp
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
-            // button4
+            // back
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button4.Location = new System.Drawing.Point(6, 312);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(79, 38);
-            this.button4.TabIndex = 23;
-            this.button4.Text = "BACK";
-            this.button4.UseVisualStyleBackColor = false;
+            this.back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.back.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.back.Location = new System.Drawing.Point(6, 312);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(79, 38);
+            this.back.TabIndex = 23;
+            this.back.Text = "BACK";
+            this.back.UseVisualStyleBackColor = false;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // radioButton1
             // 
@@ -197,19 +198,19 @@ namespace TopUp
             this.radioButton2.UseVisualStyleBackColor = false;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // button3
+            // confirm
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(240, 312);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 38);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "CONFIRM";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.confirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.confirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirm.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.confirm.Location = new System.Drawing.Point(240, 312);
+            this.confirm.Name = "confirm";
+            this.confirm.Size = new System.Drawing.Size(87, 38);
+            this.confirm.TabIndex = 9;
+            this.confirm.Text = "CONFIRM";
+            this.confirm.UseVisualStyleBackColor = false;
+            this.confirm.Click += new System.EventHandler(this.confirm_Click);
             // 
             // label8
             // 
@@ -223,19 +224,19 @@ namespace TopUp
             this.label8.TabIndex = 17;
             this.label8.Text = "Harga ";
             // 
-            // loginbtn
+            // cancel
             // 
-            this.loginbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.loginbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.loginbtn.Location = new System.Drawing.Point(121, 312);
-            this.loginbtn.Name = "loginbtn";
-            this.loginbtn.Size = new System.Drawing.Size(83, 38);
-            this.loginbtn.TabIndex = 10;
-            this.loginbtn.Text = "CANCEL";
-            this.loginbtn.UseVisualStyleBackColor = false;
-            this.loginbtn.Click += new System.EventHandler(this.loginbtn_Click);
+            this.cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cancel.Location = new System.Drawing.Point(121, 312);
+            this.cancel.Name = "cancel";
+            this.cancel.Size = new System.Drawing.Size(83, 38);
+            this.cancel.TabIndex = 10;
+            this.cancel.Text = "CANCEL";
+            this.cancel.UseVisualStyleBackColor = false;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
             // textBox5
             // 
@@ -278,9 +279,9 @@ namespace TopUp
             this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label3.Location = new System.Drawing.Point(17, 39);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 20);
+            this.label3.Size = new System.Drawing.Size(74, 20);
             this.label3.TabIndex = 12;
-            this.label3.Text = "ID Pemain";
+            this.label3.Text = "ID Game";
             // 
             // IdGameTB
             // 
@@ -472,6 +473,7 @@ namespace TopUp
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "transaksi_form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "transaction";
             this.Load += new System.EventHandler(this.transaksi_form_Load);
             this.groupBox1.ResumeLayout(false);
@@ -499,8 +501,8 @@ namespace TopUp
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox IdGameTB;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button loginbtn;
+        private System.Windows.Forms.Button confirm;
+        private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox3;
@@ -515,7 +517,7 @@ namespace TopUp
         protected internal System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button back;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonshow;
