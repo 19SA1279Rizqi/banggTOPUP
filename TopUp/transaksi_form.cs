@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -315,7 +315,7 @@ namespace TopUp
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void printbutton_Click_1(object sender, EventArgs e)
         {
             crystalreport report = new crystalreport();
             report.Show();
