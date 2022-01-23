@@ -5,54 +5,39 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace TopUp
 {
-    public partial class crystalreport : Form
+    public partial class crystal : Form
     {
-        public crystalreport()
+        public crystal()
         {
             InitializeComponent();
         }
-        string connectionString = @"Data Source=LAPTOP-KQ9Q6C8H;Initial Catalog=Topup;Integrated Security=True";
-        private void crystalreport_Load(object sender, EventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void dgvreport_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void crystal_Load(object sender, EventArgs e)
         {
-            
+            string cs = @"Data Source=LAPTOP-KQ9Q6C8H;Initial Catalog=Topup;Integrated Security=True";
+            PgSqlConnection conn = new PgSqlConnection(cs);
+            PgSqlConnection cmd = new PgSqlConnection();
+            PgSqlDataAdapter adptr = new PgSqlDataAdapter();
+    
+            string qry = "select * from .dbo.tb";
+       
+            DataTable dt = new DataTable();
+            cmd.Connection = conn;
+            cmd.CommandText = qry;
+            conn.Open();
+            adptr.SelectCommand = cmd;
+            adptr.fill(dt);
+            dataGridView1.DataSource = dt;
+            dataGridView1.Refresh();
         }
-
-        private void btnprint_Click(object sender, EventArgs e)
-        {
-            DataTable table = null;
-            string query = "select * from TransaksiTab";
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(this.connectionString))
-                {
-                    connection.Open();
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
-                    {
-                        table = new DataTable();
-                        adapter.Fill(table);
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                //handle caught exception
-            }
-
-            if (table != null)
-            {
-                dgvreport.DataSource = table.DefaultView;
-            }
         }
-    }
 }
