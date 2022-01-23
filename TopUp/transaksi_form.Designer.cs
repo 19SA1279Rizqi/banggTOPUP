@@ -34,7 +34,6 @@ namespace TopUp
             this.back = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.NamaGameTB = new System.Windows.Forms.ComboBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.confirm = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@ namespace TopUp
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.NamaGameTB = new System.Windows.Forms.TextBox();
             this.IdGameTB = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,17 +56,17 @@ namespace TopUp
             this.loginDBDataSet = new TopUp.LoginDBDataSet();
             this.mainBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainTableAdapter = new TopUp.LoginDBDataSetTableAdapters.MainTableAdapter();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonshow = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -75,7 +75,7 @@ namespace TopUp
             this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(129, 84);
+            this.label1.Location = new System.Drawing.Point(341, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 20);
             this.label1.TabIndex = 4;
@@ -88,7 +88,6 @@ namespace TopUp
             this.groupBox1.Controls.Add(this.back);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.NamaGameTB);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.confirm);
             this.groupBox1.Controls.Add(this.label8);
@@ -97,6 +96,7 @@ namespace TopUp
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.NamaGameTB);
             this.groupBox1.Controls.Add(this.IdGameTB);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label2);
@@ -114,7 +114,7 @@ namespace TopUp
             this.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.back.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.back.Location = new System.Drawing.Point(6, 312);
+            this.back.Location = new System.Drawing.Point(24, 327);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(79, 38);
             this.back.TabIndex = 23;
@@ -127,7 +127,7 @@ namespace TopUp
             this.radioButton1.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButton1.AutoSize = true;
             this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.BackgroundImage = global::TopUp.Properties.Resources.image_removebg_preview__1_;
+            this.radioButton1.BackgroundImage = global::TopUp.Properties.Resources.download__4__removebg_preview;
             this.radioButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.ForeColor = System.Drawing.Color.Yellow;
@@ -159,27 +159,12 @@ namespace TopUp
             this.comboBox1.TabIndex = 19;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // NamaGameTB
-            // 
-            this.NamaGameTB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.NamaGameTB.FormattingEnabled = true;
-            this.NamaGameTB.Items.AddRange(new object[] {
-            "MOBILE LEGEND",
-            "ARENA OF VALOR",
-            "FREE FIRE",
-            "PUBG"});
-            this.NamaGameTB.Location = new System.Drawing.Point(151, 87);
-            this.NamaGameTB.Name = "NamaGameTB";
-            this.NamaGameTB.Size = new System.Drawing.Size(176, 21);
-            this.NamaGameTB.TabIndex = 19;
-            this.NamaGameTB.SelectedIndexChanged += new System.EventHandler(this.NamaGameTB_SelectedIndexChanged);
-            // 
             // radioButton2
             // 
             this.radioButton2.Appearance = System.Windows.Forms.Appearance.Button;
             this.radioButton2.AutoSize = true;
             this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.BackgroundImage = global::TopUp.Properties.Resources.image_removebg_preview;
+            this.radioButton2.BackgroundImage = global::TopUp.Properties.Resources.download__3__removebg_preview;
             this.radioButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.ForeColor = System.Drawing.Color.Yellow;
@@ -203,7 +188,7 @@ namespace TopUp
             this.confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.confirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirm.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.confirm.Location = new System.Drawing.Point(240, 312);
+            this.confirm.Location = new System.Drawing.Point(258, 327);
             this.confirm.Name = "confirm";
             this.confirm.Size = new System.Drawing.Size(87, 38);
             this.confirm.TabIndex = 9;
@@ -229,7 +214,7 @@ namespace TopUp
             this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cancel.Location = new System.Drawing.Point(121, 312);
+            this.cancel.Location = new System.Drawing.Point(139, 327);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(83, 38);
             this.cancel.TabIndex = 10;
@@ -282,6 +267,15 @@ namespace TopUp
             this.label3.TabIndex = 12;
             this.label3.Text = "ID Game";
             // 
+            // NamaGameTB
+            // 
+            this.NamaGameTB.Location = new System.Drawing.Point(152, 88);
+            this.NamaGameTB.Name = "NamaGameTB";
+            this.NamaGameTB.ReadOnly = true;
+            this.NamaGameTB.Size = new System.Drawing.Size(176, 20);
+            this.NamaGameTB.TabIndex = 9;
+            this.NamaGameTB.TextChanged += new System.EventHandler(this.NamaGameTB_TextChanged);
+            // 
             // IdGameTB
             // 
             this.IdGameTB.Location = new System.Drawing.Point(151, 39);
@@ -289,7 +283,7 @@ namespace TopUp
             this.IdGameTB.ReadOnly = true;
             this.IdGameTB.Size = new System.Drawing.Size(176, 20);
             this.IdGameTB.TabIndex = 9;
-            this.IdGameTB.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.IdGameTB.TextChanged += new System.EventHandler(this.NamaGameTB_TextChanged);
             // 
             // label6
             // 
@@ -320,7 +314,7 @@ namespace TopUp
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(572, 422);
+            this.button1.Location = new System.Drawing.Point(636, 426);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(101, 47);
             this.button1.TabIndex = 18;
@@ -336,16 +330,16 @@ namespace TopUp
             this.label7.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label7.Location = new System.Drawing.Point(413, 139);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 20);
+            this.label7.Size = new System.Drawing.Size(97, 20);
             this.label7.TabIndex = 20;
-            this.label7.Text = "Diskon %";
+            this.label7.Text = "Biaya Admin";
             // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(572, 135);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(79, 24);
+            this.textBox3.Size = new System.Drawing.Size(189, 24);
             this.textBox3.TabIndex = 19;
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
@@ -407,23 +401,12 @@ namespace TopUp
             // 
             this.mainTableAdapter.ClearBeforeFill = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TopUp.Properties.Resources.DIVIS__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(826, 651);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(399, 300);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(410, 103);
+            this.groupBox2.Size = new System.Drawing.Size(546, 103);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             // 
@@ -433,8 +416,9 @@ namespace TopUp
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 19);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(398, 66);
+            this.dataGridView1.Size = new System.Drawing.Size(534, 66);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // buttonshow
             // 
@@ -453,12 +437,23 @@ namespace TopUp
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TopUp.Properties.Resources.DIVIS__2_;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -1293);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(826, 651);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // transaksi_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(821, 509);
+            this.ClientSize = new System.Drawing.Size(985, 509);
             this.Controls.Add(this.buttonshow);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label10);
@@ -479,9 +474,9 @@ namespace TopUp
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -512,14 +507,14 @@ namespace TopUp
         private LoginDBDataSet loginDBDataSet;
         private System.Windows.Forms.BindingSource mainBindingSource;
         private LoginDBDataSetTableAdapters.MainTableAdapter mainTableAdapter;
-        protected internal System.Windows.Forms.ComboBox NamaGameTB;
         protected internal System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button back;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonshow;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.TextBox NamaGameTB;
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }

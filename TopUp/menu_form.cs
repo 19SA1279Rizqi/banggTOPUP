@@ -1,4 +1,5 @@
 ﻿using System;
+
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -58,10 +59,10 @@ namespace TopUp
 
             else
             {
-                SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-KQ9Q6C8H;Initial Catalog=Topup;Integrated Security=True");
+                SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Lenovo\Desktop\TopUpApp\DB\LoginDB.mdf;Integrated Security=True;Connect Timeout=30");
                 sqlcon.Open();
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO PlayerTab(Game,GameID,Nickname,Email) VALUES('" + comboBox1.SelectedItem + "', @GameID,@Nickname,@Email)", sqlcon);
+                SqlCommand cmd = new SqlCommand("INSERT INTO PlayerTab(Game,GameID,Nickname,Email) VALUES('" + comboBox1.Text + "', @GameID,@Nickname,@Email)", sqlcon);
                 cmd.Parameters.AddWithValue("@GameID", textBox1.Text);
                 cmd.Parameters.AddWithValue("@Nickname", textBox2.Text);
                 cmd.Parameters.AddWithValue("@Email", textBoxEmail.Text);
@@ -97,7 +98,7 @@ namespace TopUp
         private void buttonreset_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != string.Empty || textBox2.Text != string.Empty || textBoxEmail.Text != string.Empty)
-                comboBox1.SelectedIndex = -1;
+            comboBox1.Text = "";
             textBox1.Text = "";
             textBox2.Text = "";
             textBoxEmail.Text = "";

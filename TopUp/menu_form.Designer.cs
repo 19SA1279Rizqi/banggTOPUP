@@ -32,7 +32,6 @@ namespace TopUp
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@ namespace TopUp
             this.buttonconfirm = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,20 +73,6 @@ namespace TopUp
             this.textBox2.Size = new System.Drawing.Size(176, 20);
             this.textBox2.TabIndex = 4;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "MOBILE LEGEND",
-            "ARENA OF VALOR",
-            "FREE FIRE",
-            "PUBG"});
-            this.comboBox1.Location = new System.Drawing.Point(268, 145);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(176, 21);
-            this.comboBox1.TabIndex = 5;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -194,6 +180,14 @@ namespace TopUp
             this.textBoxEmail.TabIndex = 9;
             this.textBoxEmail.TextChanged += new System.EventHandler(this.textBoxEmail_TextChanged);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Location = new System.Drawing.Point(268, 148);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(176, 20);
+            this.comboBox1.TabIndex = 4;
+            this.comboBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // menu_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,8 +201,8 @@ namespace TopUp
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -234,8 +228,8 @@ namespace TopUp
         private System.Windows.Forms.Button buttonreset;
         private System.Windows.Forms.Button buttontrnsaksi;
         private System.Windows.Forms.Button buttonconfirm;
-        public System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBoxEmail;
+        public System.Windows.Forms.TextBox comboBox1;
     }
 }

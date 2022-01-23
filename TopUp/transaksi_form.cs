@@ -28,21 +28,9 @@ namespace TopUp
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void NamaGameTB_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void transaksi_form_Load(object sender, EventArgs e)
-        {
-            NamaGameTB.SelectedItem = f1.comboBox1.SelectedItem;
-            IdGameTB.Text = f1.textBox1.Text;
-        }
-
-        //TextBox namagame
-        private void NamaGameTB_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (NamaGameTB.SelectedItem.ToString() == "ARENA OF VALOR")
+            if (NamaGameTB.Text.ToString() == "ARENA OF VALOR")
             {
                 comboBox1.SelectedIndex = -1;
                 comboBox1.Items.Clear();
@@ -51,7 +39,7 @@ namespace TopUp
                 comboBox1.Items.Add("500 VOC");
                 comboBox1.Items.Add("1000 VOC");
             }
-            else if (NamaGameTB.SelectedItem.ToString() == "MOBILE LEGEND")
+            else if (NamaGameTB.Text.ToString() == "MOBILE LEGEND")
             {
                 comboBox1.SelectedIndex = -1;
                 comboBox1.Items.Clear();
@@ -60,7 +48,7 @@ namespace TopUp
                 comboBox1.Items.Add("500 DM");
                 comboBox1.Items.Add("1000 DM");
             }
-            else if (NamaGameTB.SelectedItem.ToString() == "FREE FIRE")
+            else if (NamaGameTB.Text.ToString() == "FREE FIRE")
             {
                 comboBox1.SelectedIndex = -1;
                 comboBox1.Items.Clear();
@@ -69,7 +57,7 @@ namespace TopUp
                 comboBox1.Items.Add("500 DM");
                 comboBox1.Items.Add("1000 DM");
             }
-            else if (NamaGameTB.SelectedItem.ToString() == "PUBG")
+            else if (NamaGameTB.Text.ToString() == "PUBG")
             {
                 comboBox1.SelectedIndex = -1;
                 comboBox1.Items.Clear();
@@ -78,6 +66,18 @@ namespace TopUp
                 comboBox1.Items.Add("500 UC");
                 comboBox1.Items.Add("1000 UC");
             }
+        }
+
+        private void transaksi_form_Load(object sender, EventArgs e)
+        {
+            NamaGameTB.Text = f1.comboBox1.Text;
+            IdGameTB.Text = f1.textBox1.Text;
+        }
+
+        //TextBox namagame
+        private void NamaGameTB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         //tombol back
@@ -184,6 +184,29 @@ namespace TopUp
 
                 textBox5.Text = "205000";
             }
+
+
+            //GAME LAIN 
+            else if (comboBox1.SelectedItem.ToString() == "100 CREDIT")
+            {
+
+                textBox5.Text = "56000";
+            }
+            else if (comboBox1.SelectedItem.ToString() == "300 CREDIT")
+            {
+
+                textBox5.Text = "106000";
+            }
+            else if (comboBox1.SelectedItem.ToString() == "500 CREDIT")
+            {
+
+                textBox5.Text = "156000";
+            }
+            else if (comboBox1.SelectedItem.ToString() == "1000 CREDIT")
+            {
+
+                textBox5.Text = "205000";
+            }
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -202,14 +225,14 @@ namespace TopUp
         {
             if (radioButton1.Checked)
             {
-                textBox3.Text = "10";
+                textBox3.Text = "6000";
             }
 
             if (radioButton2.Checked)
             {
-                textBox3.Text = "15";
+                textBox3.Text = "7500";
             }
-            textBox6.Text = (Convert.ToDouble(textBox5.Text) - Convert.ToDouble(textBox5.Text) * Convert.ToDouble(textBox3.Text) / 100).ToString();
+            textBox6.Text = (Convert.ToDouble(textBox5.Text) + Convert.ToDouble(textBox3.Text)).ToString();
 
             textBox7.Text = "";
             Random random = new Random();
@@ -251,7 +274,7 @@ namespace TopUp
         }
 
 
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-KQ9Q6C8H;Initial Catalog=Topup;Integrated Security=True");
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Lenovo\Desktop\TopUpApp\DB\LoginDB.mdf;Integrated Security=True;Connect Timeout=30");
         
         //menampilkan data di gridview
         private void GetValue()
@@ -292,10 +315,10 @@ namespace TopUp
         {
             try
             {
-                SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-KQ9Q6C8H;Initial Catalog=Topup;Integrated Security=True");
+                SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Lenovo\Desktop\TopUpApp\DB\LoginDB.mdf;Integrated Security=True;Connect Timeout=30");
                 sqlcon.Open();
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO TransaksiTab(Game,GameID,Nominal,TotalHarga,KodePembayaran) VALUES('" + NamaGameTB.SelectedItem + "', @GameID,@Nominal,@TotalHarga,@KodePembayaran)", sqlcon);
+                SqlCommand cmd = new SqlCommand("INSERT INTO TransaksiTab(Game,GameID,Nominal,TotalHarga,KodePembayaran) VALUES('" + NamaGameTB.Text + "', @GameID,@Nominal,@TotalHarga,@KodePembayaran)", sqlcon);
                 cmd.Parameters.AddWithValue("@GameID", IdGameTB.Text);
                 cmd.Parameters.AddWithValue("@Nominal", comboBox1.Text);
                 cmd.Parameters.AddWithValue("@TotalHarga", textBox6.Text);
@@ -317,9 +340,29 @@ namespace TopUp
 
         private void printbutton_Click_1(object sender, EventArgs e)
         {
-            crystalreport report = new crystalreport();
-            report.Show();
-            Dispose();
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("KodePembayaran", typeof(string));
+            dt.Columns.Add("Game", typeof(string));
+            dt.Columns.Add("GameID", typeof(string));
+            dt.Columns.Add("Nominal", typeof(string));
+            dt.Columns.Add("TotalHarga", typeof(string));
+           
+
+            foreach (DataGridViewRow dgv in dataGridView1.Rows)
+            {
+                dt.Rows.Add(dgv.Cells[0].Value, dgv.Cells[1].Value, dgv.Cells[2].Value, dgv.Cells[3].Value, dgv.Cells[4]);
+            }
+
+            ds.Tables.Add(dt);
+            ds.WriteXmlSchema("Game.xml");
+            crystalreport fm = new crystalreport();
+            fm.Show();
+            CrystalReport1 cr = new CrystalReport1();
+            cr.SetDataSource(ds);
+            fm.crystalReportViewer1.ReportSource = cr;
+
+
         }
 
         private void back_Click(object sender, EventArgs e)
@@ -327,6 +370,11 @@ namespace TopUp
             menu_form objmenu_form = new menu_form();
             this.Hide();
             objmenu_form.Show();
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
