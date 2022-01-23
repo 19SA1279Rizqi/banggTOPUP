@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -338,7 +338,7 @@ namespace TopUp
 
         }
 
-        private void printbutton_Click_1(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
             DataTable dt = new DataTable();
